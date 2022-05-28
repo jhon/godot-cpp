@@ -283,7 +283,7 @@ protected:
 	}
 
 	virtual GDNativePropertyInfo gen_argument_type_info(int p_arg) const {
-		GDNativePropertyInfo pi;
+		GDNativePropertyInfo pi = { 0 };
 		if (p_arg >= 0 && p_arg < (int)sizeof...(P)) {
 			call_get_argument_type_info<P...>(p_arg, pi);
 		} else {
@@ -359,7 +359,7 @@ protected:
 	}
 
 	virtual GDNativePropertyInfo gen_argument_type_info(int p_arg) const {
-		GDNativePropertyInfo pi;
+		GDNativePropertyInfo pi = { 0 };
 		if (p_arg >= 0 && p_arg < (int)sizeof...(P)) {
 			call_get_argument_type_info<P...>(p_arg, pi);
 		} else {
@@ -437,7 +437,7 @@ protected:
 
 	virtual GDNativePropertyInfo gen_argument_type_info(int p_arg) const {
 		if (p_arg >= 0 && p_arg < (int)sizeof...(P)) {
-			GDNativePropertyInfo pi;
+			GDNativePropertyInfo pi = { 0 };
 			call_get_argument_type_info<P...>(p_arg, pi);
 			return pi;
 		} else {
@@ -520,7 +520,7 @@ protected:
 
 	virtual GDNativePropertyInfo gen_argument_type_info(int p_arg) const {
 		if (p_arg >= 0 && p_arg < (int)sizeof...(P)) {
-			GDNativePropertyInfo pi;
+			GDNativePropertyInfo pi = { 0 };
 			call_get_argument_type_info<P...>(p_arg, pi);
 			return pi;
 		} else {
@@ -599,7 +599,7 @@ protected:
 	}
 
 	virtual GDNativePropertyInfo gen_argument_type_info(int p_arg) const {
-		GDNativePropertyInfo pi;
+		GDNativePropertyInfo pi = { 0 };
 		call_get_argument_type_info<P...>(p_arg, pi);
 		return pi;
 	}
@@ -661,7 +661,7 @@ protected:
 
 	virtual GDNativePropertyInfo gen_argument_type_info(int p_arg) const {
 		if (p_arg >= 0 && p_arg < (int)sizeof...(P)) {
-			GDNativePropertyInfo pi;
+			GDNativePropertyInfo pi = { 0 };
 			call_get_argument_type_info<P...>(p_arg, pi);
 			return pi;
 		} else {
